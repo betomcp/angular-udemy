@@ -1,0 +1,60 @@
+@import '../../../../../dist/scss/variables.scss';
+
+section{
+  width: 100%;
+  min-height: 250px;
+
+  background-color: $secondary-background-color;
+  box-shadow:  0 0 3px rgb(222, 222, 222);
+
+  margin-top: 20px;
+
+  &.loading{
+    background-image: url('../../../../../assets/img/undraw_taking_notes_re_bnaf.svg');
+    background-size: contain;
+
+  }
+}
+
+ul{
+  padding: 20px;
+
+  li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    input{
+
+      outline: none;
+
+      &[type="checkbox"]{
+        width: 5%;
+      }
+
+      &[type="text"]{
+        width: 80%;
+        padding: 5px 10px;
+        border: none;
+
+        font-size: 16px;
+        color: $primary-text-color;
+
+        &.checked{
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  button{
+    width: 5%;
+    background: none;
+    border: none;
+  }
+  button:hover{
+    cursor: pointer;
+  }
+}
